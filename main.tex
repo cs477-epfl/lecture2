@@ -1,17 +1,17 @@
 % Finished mode.
-% \documentclass[nocolor]{article}
-% \documentclass{article}
+%\documentclass[nocolor]{article}
+%\documentclass{article}
 
 % Draft mode.
-% \documentclass[working,nocolor]{article}
+%\documentclass[working,nocolor]{article}
 \documentclass[working]{article}
 
 \input{preamble.tex}
 
 \usepackage{lipsum} % For random text. You don't need this.
 
-\title{Title}
-\author{Author}
+\title{Lecture 2\\\textbf{Process and Thread}}
+\author{Yue Yu}
 \date{\today}
 
 \newcommand{\linktootherpages}{link}
@@ -22,12 +22,10 @@
 
 \begin{document}
   \createintro
-
+  \setlength{\parindent}{0em} % No indentation
   % start lectures
-  \input{lectures/lec-01.tex}
-  \input{lectures/lec-02.tex}
-  \input{lectures/lec-03.tex}
+  \input{lectures/basics.tex}
+  \input{lectures/lwc.tex}
+  \input{lectures/sa.tex}
   % end lectures
-
-  \listnotes
 \end{document}

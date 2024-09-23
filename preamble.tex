@@ -225,9 +225,9 @@
 
   % Check if user passed the lecture title or not.
   \ifthenelse{\isempty{#3}}{
-    \def\@lesson{Lecture \arabic{lecturecounter}}
+    \def\@lesson{\arabic{lecturecounter}}
   }{
-    \def\@lesson{Lecture \arabic{lecturecounter}: #3}
+    \def\@lesson{\arabic{lecturecounter} #3}
   }
 
   % Display the information like the following:
@@ -285,7 +285,7 @@
   \thispagestyle{empty}
   % Create a newpage.
   \newpage
-
+\iffalse
   % Input the intro.tex page if it exists.
   \IfFileExists{intro.tex}{ % If the intro.tex file exists.
     % Input the intro.tex file.
@@ -316,9 +316,9 @@
     % Force a \newpageage.
     \forcenewpage
   }
-
+\fi
   % Create a new page.
-  \newpage
+  %\newpage
 
   % Remove the center stuff we did above, and replace it with just the page
   % number, which is still in roman numerals.
@@ -598,7 +598,7 @@
     colframe=gray!80!black,
     size=small,
     boxrule=1pt,
-    title=\textbf{Note:-},
+    title=\textbf{Note},
     halign title=flush center,
     coltitle=black,
     breakable,
@@ -632,7 +632,7 @@
     colframe=myblue!80!black,
     attach boxed title to top left={yshift*=-\tcboxedtitleheight},
     fonttitle=\bfseries,
-    title=\textbf{Question:-},
+    title=\textbf{Question},
     boxed title size=title,
     boxed title style={%
       sharp corners,
@@ -658,7 +658,7 @@
     colback=white,
     colframe=mygreen!80!black,
     attach boxed title to top left={yshift*=-\tcboxedtitleheight},
-    title=\textbf{Solution:-},
+    title=\textbf{Solution},
     boxed title size=title,
     boxed title style={%
       sharp corners,
